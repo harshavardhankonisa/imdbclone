@@ -1,24 +1,76 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: Helvetica,Arial,sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, Arial, sans-serif;
 }
-body{
-    background-color: black;
+body {
+  background: repeating-radial-gradient(
+    circle at center 10%,
+    gray,
+    black 1100px
+  );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
-header{
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 20px;
-    align-items: center;
+header {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 5%;
+  align-items: center;
 }
-nav a{
-    text-decoration: solid;
-    color: white;
-    font-weight: bold;
-    padding: 10px;
-    border-radius: 4px;
+nav a {
+  text-decoration: solid;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
-nav a:hover{
-    background-color: grey;
+nav a:hover {
+  background-color: grey;
+}
+
+.fav-list {
+  display: flex;
+  padding: 0px 10%;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.tile {
+  height: 320px;
+  width: 180px;
+  background-color: black;
+  border: 5px solid gray;
+  padding: 5px;
+  margin: 10px;
+  text-decoration: none;
+}
+
+.tile img {
+  width: 100%;
+  height: 240px;
+  object-fit: fill;
+}
+
+.tile p {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  height: 35px;
+  text-overflow: clip;
+  overflow: hidden;
+}
+
+.tile .fav-btn {
+  display: block;
+  margin: 5px auto;
+  padding: 5px;
+  border: 5px transparent;
+  border-radius: 4px;
+  background-color: red;
+  color: white;
 }

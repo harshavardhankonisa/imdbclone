@@ -25,6 +25,7 @@ nav a {
   font-weight: bold;
   padding: 10px;
   border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 nav a:hover {
   background-color: grey;
@@ -32,29 +33,51 @@ nav a:hover {
 
 .search {
   display: flex;
+  align-items: center;
+  max-width: 300px;
+  margin: 10% auto;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+#search {
+  flex-grow: 1;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  outline: none;
+}
+
+#search-btn {
+  background-color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#search-btn:hover {
+  background-color: gray;
+}
+
+#search-btn img {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+#search::placeholder {
+  color: #888;
+}
+
+.results {
+  display: flex;
+  padding: 0px 10%;
   justify-content: center;
   align-items: center;
-  padding: 10px 20px;
-}
-#search {
-  width: 70%;
-  height: 35px;
-  border-radius: 4px;
-  margin-right: 4px;
-}
-
-.btn {
-  border-radius: 4px;
-  padding: 4px;
-  cursor: pointer;
-}
-
-.results{
-    display: flex;
-    padding: 0px 5% ;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .tile {
@@ -64,29 +87,35 @@ nav a:hover {
   border: 5px solid gray;
   padding: 5px;
   margin: 10px;
+  text-decoration: none;
 }
 
-.tile img{
-    width: 100%;
-    height: 240px;
-    object-fit: fill;
+.tile img {
+  width: 100%;
+  height: 240px;
+  object-fit: fill;
 }
 
-.tile p{
-    display: block;
-    text-align: center;
-    font-weight: bold;
-    color: white;
-    height: 35px;
-    text-overflow: clip;
-    overflow: hidden;
+.tile p {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  height: 35px;
+  text-overflow: clip;
+  overflow: hidden;
 }
 
-.tile button{
-    display: block;
-    margin: 5px auto;
-    padding: 5px;
-    border: 5px transparent;
-    border-radius: 4px;
-    background-color: gray;
+.tile button {
+  display: block;
+  margin: 5px auto;
+  padding: 5px;
+  border: 5px transparent;
+  border-radius: 4px;
+  background-color: gray;
+}
+
+.tile .button-active {
+  background-color: red;
+  color: white;
 }
