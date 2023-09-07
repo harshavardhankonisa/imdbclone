@@ -21,7 +21,7 @@ function loadItems(){
             removeFromFavourites(movie.imdbID);
           });
           movieCard.addEventListener("click", () => {
-            window.location.href = `pages/moviepage.html?id=${movie.imdbID}`;
+            window.location.href = `../pages/moviepage.html?id=${movie.imdbID}`;
           });
         });
       }else{

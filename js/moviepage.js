@@ -21,7 +21,7 @@ function loadContent(results) {
         <h1>${results.Title}</h1>
         <hr>
         <br>
-        <p>Plot:${results.Plot}</p>
+        <p>Plot: ${results.Plot}</p>
     </div>
     `;
 }
