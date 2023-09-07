@@ -4,10 +4,10 @@
   font-family: Helvetica, Arial, sans-serif;
 }
 body {
-  background: repeating-radial-gradient(
+  background: radial-gradient(
     circle at center 10%,
     gray,
-    black 1100px
+    black 1200px
   );
   background-repeat: no-repeat;
   background-attachment: fixed;

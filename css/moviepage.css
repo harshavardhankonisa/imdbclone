@@ -43,25 +43,27 @@ main .details {
 
 @media (min-width: 576px) {
   body {
-    background: repeating-radial-gradient(
+    background: radial-gradient(
       circle at center 10%,
       gray,
-      black 1100px
+      black 1200px
     );
     background-repeat: no-repeat;
     background-attachment: fixed;
   }
   main {
     display: flex;
-    margin: 15% 15% 0% 15%;
+    margin: 3% 15% 0% 15%;
     align-items: center;
     justify-content: space-around;
     padding: 10px;
     border: 5px solid gray;
+    max-height: 80vh;
   }
   main img {
     position: sticky;
     width: 50%;
+    max-height: 80vh;
   }
   main .details {
     width: 50%;
