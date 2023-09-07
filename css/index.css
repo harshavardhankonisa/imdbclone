@@ -31,6 +31,8 @@ nav a:hover {
   background-color: grey;
 }
 
+/* search styling is started here */
+
 .search {
   display: flex;
   align-items: center;
@@ -71,6 +73,8 @@ nav a:hover {
 #search::placeholder {
   color: #888;
 }
+
+/* search results styling starts from here */
 
 .results {
   display: flex;

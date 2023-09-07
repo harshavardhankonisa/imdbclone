@@ -4,6 +4,7 @@ const searchInput = document.getElementById("search");
 const searchButton = document.getElementById("search-btn");
 const searchResults = document.getElementById("results");
 
+// search function that searches the seach results
 async function search() {
   const input = searchInput.value;
   const response = await fetch(
@@ -17,6 +18,7 @@ async function search() {
   }
 }
 
+// function that adds movie cards inside movies container
 function appendResults(results) {
   if (results.length != 0) {
     searchResults.innerHTML = "";
@@ -56,6 +58,8 @@ function appendResults(results) {
   }
 }
 
+
+// function that adds favourite movies to localstorage
 function addToFavourites(title) {
   if (localStorage.getItem("favourites")) {
     const items = new Set(JSON.parse(localStorage.getItem("favourites")));
@@ -68,11 +72,13 @@ function addToFavourites(title) {
   }
 }
 
+// function that removes favourite movies to localstorage
 function removeFromFavourites(title) {
   const items = new Set(JSON.parse(localStorage.getItem("favourites")));
   items.delete(title);
   localStorage.setItem("favourites", JSON.stringify(Array.from(items)));
 }
 
+//search key handlers
 searchInput.addEventListener("keyup", search);
 searchButton.addEventListener("click", search);

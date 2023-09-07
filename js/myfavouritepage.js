@@ -2,6 +2,7 @@ const API_KEY = "47fe8a3a";
 
 const favouritesList = document.getElementById("fav-list");
 
+// function that load items of favourite movies form localstorage
 function loadItems(){
     const results = new Set(JSON.parse(localStorage.getItem("favourites")));
     if (results.length != 0) {
@@ -29,6 +30,7 @@ function loadItems(){
       }
 }
 
+// function that get the movie data
 async function getMovieById(imdbID){
     const response = await fetch(
         `https://www.omdbapi.com/?apikey=${API_KEY}&i=${imdbID}`
@@ -38,6 +40,7 @@ async function getMovieById(imdbID){
 
 }
 
+// function that removes the imdbId form favouritesList in localStorage
 function removeFromFavourites(imdbID){
   const items = new Set(JSON.parse(localStorage.getItem("favourites")));
   items.delete(imdbID);
@@ -45,6 +48,7 @@ function removeFromFavourites(imdbID){
   this.loadItems();
 }
 
+// loads the cards of movies once the page renders
 window.onload = () => {
     this.loadItems();
 }

@@ -2,6 +2,7 @@ const API_KEY = "47fe8a3a";
 
 const card = document.getElementById("card");
 
+// function that imdbID of the element clicked on homepage and searches for the results
 async function searchContent(id) {
   const response = await fetch(
     `https://www.omdbapi.com/?apikey=${API_KEY}&i=${id}`
@@ -14,6 +15,7 @@ async function searchContent(id) {
   }
 }
 
+// functions that renders the resultant movie to main container
 function loadContent(results) {
   card.innerHTML = `
     <img src="${results.Poster}">
@@ -26,6 +28,7 @@ function loadContent(results) {
     `;
 }
 
+//fetches the imdbId of the element that has been clicked upon and searches for that upon windows load
 window.onload = () => {
   const urlParams = new URLSearchParams(window.location.search);
   const imdbID = urlParams.get("id");

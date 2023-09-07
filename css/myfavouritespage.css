@@ -31,6 +31,8 @@ nav a:hover {
   background-color: grey;
 }
 
+/* fav movies list stling starts here */
+
 .fav-list {
   display: flex;
   padding: 0px 10%;
